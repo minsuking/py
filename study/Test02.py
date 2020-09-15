@@ -1,4 +1,11 @@
+'''
+중첩반복문 (2중 for문)
+
+
 for i in range(5):
-    for j in range(i+1):
+    for j in range(5-i):
         print("*", end = ' ')
     print()
+'''
+
+
