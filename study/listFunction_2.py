@@ -50,4 +50,6 @@ if any(50>x for x in a):
     print("YES")
 else:
     print("NO")
+
+#공부를 이만큼이나 했는데 안된다고? github test
     
