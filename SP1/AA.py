@@ -3,6 +3,7 @@ import sys
 myPath = os.path.dirname(os.path.abspath(__file__))
 sys.stdin=open(myPath+"/input.txt","rt")
 '''
+k번째 약수
 n, k=map(int,input().split())
 count=0
 for i in range(1,n+1):
@@ -14,4 +15,13 @@ for i in range(1,n+1):
 else:
     print(-1)
 '''
-
+'''
+K번째 수
+T = int(input())
+for t in range(T):
+    n, s, e, k=map(int,input().split())
+    a=list(map(int,input().split()))
+    a=a[s-1:e]
+    a.sort()
+    print("#%d %d" %(t+1,a[k-1]))
+'''
