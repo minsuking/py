@@ -50,3 +50,24 @@ for i in range(len(arr)):
     
 print(arrMin)
 '''
+'''
+4.대표값
+'''
+n=int(input())
+a=list(map(int,input().split()))
+ave=round(sum(a)/n)
+min=9999999
+minIdx=-1
+for idx, x in enumerate(a):
+    tmp=abs(x-ave)
+    if tmp<min:
+        min=tmp
+        score=x
+        minIdx=idx
+    elif tmp==min:
+        if x>score:
+            min=tmp
+            score=x
+            minIdx=idx
+
+print(ave, minIdx+1)
