@@ -52,10 +52,11 @@ print(arrMin)
 '''
 '''
 4.대표값
-'''
+
 n=int(input())
 a=list(map(int,input().split()))
-ave=round(sum(a)/n)
+ave=sum(a)/n + 0.5
+ave = int(ave)
 min=9999999
 minIdx=-1
 for idx, x in enumerate(a):
@@ -71,3 +72,45 @@ for idx, x in enumerate(a):
             minIdx=idx
 
 print(ave, minIdx+1)
+
+a = 4.50000
+print(round(a))
+'''
+'''
+5. 정다면체
+
+n, m=map(int,input().split())
+max = 0
+cnt=[0]*(n+m+3)
+for i in range(1, n+1):
+    for j in range(1, m+1):
+        cnt[i+j]=cnt[i+j]+1
+for i in range(n+m+1):
+    if cnt[i]>max:
+        max = cnt[i]
+
+for i in range(n+m+1):
+    if max==cnt[i]:
+        print(i, end=' ')
+'''
+'''
+6. 자릿수의 합
+'''
+T = input()
+a=list(map(int,input().split()))
+maxNum = 0
+max = 0
+
+def digit_sum(x):
+    sum=0
+    while x>0:
+        sum+=x%10
+        x=x//10
+    return sum 
+
+for x in a:
+    tot=digit_sum(x)
+    if max<tot:
+        max=tot
+        maxNum=x
+print(maxNum)
