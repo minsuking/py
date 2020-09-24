@@ -103,9 +103,8 @@ max = 0
 
 def digit_sum(x):
     sum=0
-    while x>0:
-        sum+=x%10
-        x=x//10
+    for i in str(x):
+        sum+=int(i)
     return sum 
 
 for x in a:
